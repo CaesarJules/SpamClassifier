@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from functions import *
 
 #Backend API IP address
-url="http://127.0.0.1:8000/api/status/"
+url="http://x.y.z.1996:8000/api/status/"
 #Get the current file's directory
 path = os.path.dirname(__file__)
 filepath = os.path.join(path, 'data/sample_annotated.csv')
@@ -39,8 +39,8 @@ st.text("")
 expander_bar = st.expander("About")
 expander_bar.markdown("""
 ##### This app is a reviews' *spam classifier*.
-* **EDA and Model Development Details :** [CoinMarketCap](http://coinmarketcap.com).
-* **Sample dataset source :** [CoinMarketCap](http://coinmarketcap.com).
+* **EDA and Model Development Details :** [Github](https://github.com/CaesarJules/SpamClassifier).
+* **Sample dataset source :** [TensorFlow Datasets](https://www.tensorflow.org/datasets/catalog/amazon_us_reviews#amazon_us_reviewspc_v1_00).
 * **Python libraries used:** streamlit, pandas, numpy, requests, plotly, time, os, matplotlib.
 """)
 
