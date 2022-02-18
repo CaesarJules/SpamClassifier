@@ -160,6 +160,8 @@ elif len(single_review.strip())>0:
 else:
     col2.subheader(" ⬅ Please enter product reviews, or use one of the sample dataset(s) provided above")
 
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
     
 
 
