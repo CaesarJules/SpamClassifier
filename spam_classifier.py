@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from functions import *
 
 #Backend API IP address
-url="http://x.y.z.1996:8000/api/status/"
+url="http://44.202.42.66:8000/api/status/"
 #Get the current file's directory
 path = os.path.dirname(__file__)
 filepath = os.path.join(path, 'data/sample_annotated.csv')
