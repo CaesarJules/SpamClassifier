@@ -23,6 +23,7 @@ st.set_page_config(page_title='Spam Detector', page_icon = logo, layout = 'wide'
 
 def test_url_availability(url):
     try:
+        url = "{}/admin/".format(url.split('/api')[0])
         site_ping = requests.head(url)
         if site_ping.status_code < 400:
             return True
