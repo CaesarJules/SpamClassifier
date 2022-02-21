@@ -18,7 +18,7 @@ url="http://44.202.42.66:8000/api/status/"
 path = os.path.dirname(__file__)
 filepath = os.path.join(path, 'data/sample_annotated.csv')
 #Create logo filepath
-logo = os.path.join(path, 'data/logo.png')
+logo = os.path.join(path, 'data/plots/logo.png')
 st.set_page_config(page_title='Spam Detector', page_icon = logo, layout = 'wide', initial_sidebar_state = 'auto')
 
 def test_url_availability(url):
