@@ -33,7 +33,7 @@ def display_updated_layout(dataset, count_results, colors, c2, c3, fig):
         overwrite = True,
     )
 
-    result = dict(dataset['status'].value_counts(sort=False))
+    result = dict(dataset['status'].value_counts(sort=True))
     
     x = list(result.keys())
     y = list(result.values())
