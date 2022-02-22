@@ -33,8 +33,6 @@ def test_url_availability(url):
 fig = go.Figure()
 st.title("Spam Detector")
 st.text("")
-st.text("")
-st.text("")
 #---------------------------------#
 # About
 expander_bar = st.expander("About")
@@ -47,7 +45,6 @@ expander_bar.markdown("""
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-st.text("")
 st.text("")
 
 col2, col3 = st.columns((2,1))

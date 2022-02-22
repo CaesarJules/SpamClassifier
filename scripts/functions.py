@@ -31,6 +31,8 @@ def get_results(dataset, url):
 def display_updated_layout(dataset, count_results, colors, c2, c3, fig):
     fig.update_layout(
         overwrite = True,
+        width = 800,
+        height= 600
     )
 
     result = dict(dataset['status'].value_counts(sort=True))
@@ -48,9 +50,8 @@ def display_updated_layout(dataset, count_results, colors, c2, c3, fig):
     fig.add_trace(go.Pie(labels=x, values=y, pull=[0, 0.2], 
     marker_colors=['rgb(102, 255, 102)', 'rgb(255, 102, 102)']))
     c2.text("")
-    c2.text("")
     c2.subheader("Multiple Reviews Analysis")
-    c2.plotly_chart(fig, use_container_width=True)
+    c2.plotly_chart(fig)
     c2.subheader("Download the Spam Classification results file here:")
     
     csv = convert_df(dataset)
@@ -71,6 +72,8 @@ def display_updated_layout(dataset, count_results, colors, c2, c3, fig):
     fig2.update_layout(
         overwrite = True,
         width = 600,
+        xaxis=dict(showgrid=False),
+        yaxis=dict(showgrid=False)
     )
     fig2.add_trace(go.Bar(
         x=list(dict(count_results).values()),

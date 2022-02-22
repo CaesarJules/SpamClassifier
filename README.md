@@ -19,7 +19,7 @@ This [**Spam Detector**](https://spamclassifier11.herokuapp.com/) application ex
   - #### Data Collection
   I used a dataset of Amazon electronic products reviews with spam and non-spam labels from Kaggle Datasets, labeled and shared by [(Hussain et al., 2020)](https://ieeexplore.ieee.org/document/9027828)
   - #### Data Pre-processing
-  I firstly reduced the dataset to 50,000 balanced reviews, and used **WordCloud** to compare the most frequent words in each category. <br />Then, I, realized that words like `great` and `good` are more frequent in spam reviews compared to non-spam ones. <br />
+  Firstly, I reduced the dataset to 50,000 balanced reviews, and used **WordCloud** to compare the most frequent words in each category. <br />Then, I, realized that words like `great` and `good` are more frequent in spam reviews compared to non-spam ones. <br />
   Thereafter, using the `NLTK` package, I normalized each review by removing non-alphabetic words/characters, english stop-words, and lemmatization.
   - #### Feature Extraction
   I tokenized each review, and used the `Word2vec` model to get embeddings, as well as the `TfidfVectorizer`.
@@ -37,8 +37,8 @@ This [**Spam Detector**](https://spamclassifier11.herokuapp.com/) application ex
        The accuracy score of the the Logistic Regression model was `84.15%`, with `84%` accuracy for both precision, and recall.<br />
        **Confusion Matrix** <br />
       ![Confusion Matrix](./data/plots/cm_LR.png "C.M.")
-    - Finally, I fit a Random Forest Classifier, resulting in a `81.54%` accuracy score, with a lot more more False Negatives compared to the previous models
-> **_NOTE:_** Lastly, I exported the model with the best performance(the **LSTM** model), and deployed it with a Django API that I developed [here]().
+    - Finally, I fitted a Random Forest Classifier, resulting in a `81.54%` accuracy score, with a lot more more False Negatives compared to the previous models
+> **_NOTE:_** I exported the model with the best performance(the **LSTM** model), and deployed it with a Django API that I developed [here]().
 - ### Application Development and Model Deployment
   - #### Front End
     - I used the [streamlit](https://streamlit.io/) framework for its simplicity in developing data apps.
