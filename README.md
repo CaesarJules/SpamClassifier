@@ -1,7 +1,7 @@
 <!-- Add banner here -->
 
 # Customer Reviews Spam Classifier
-This is a web application that classify single/many input customer reviews for being either fake(spam) or real(non-spam), with an extra functionality to filter out `unverified` customers' reviews.<br><br />
+This is a web application that classifies single/many input customer reviews for being either `fake(spam)` or `real(non-spam)`, with an extra functionality to filter out `unverified` customers' reviews.<br><br />
 The application can be accessed [**here**](https://spamclassifier11.herokuapp.com/).
 # Demo-Preview
 ![Demo](./data/plots/demo.png "Demo")
@@ -20,7 +20,7 @@ This [**Spam Detector**](https://spamclassifier11.herokuapp.com/) application ex
   I used a dataset of Amazon electronic products reviews with spam and non-spam labels from Kaggle Datasets, labeled and shared by [(Hussain et al., 2020)](https://ieeexplore.ieee.org/document/9027828)
   - #### Data Pre-processing
   Firstly, I reduced the dataset to 50,000 balanced reviews, and used **WordCloud** to compare the most frequent words in each category. <br />Then, I, realized that words like `great` and `good` are more frequent in spam reviews compared to non-spam ones. <br />
-  Thereafter, using the `NLTK` package, I normalized each review by removing non-alphabetic words/characters, english stop-words, and lemmatization.
+  Thereafter, using the `NLTK` package, I normalized each review by removing non-alphabetic words/characters, removing english stop-words, and lemmatization.
   - #### Feature Extraction
   I tokenized each review, and used the `Word2vec` model to get embeddings, as well as the `TfidfVectorizer`.
   - #### Benchmarking
